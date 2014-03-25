@@ -1,16 +1,23 @@
 package com.pangu.neusoft.healthe;
 
+import com.pangu.neusoft.healthcard.ListCardActivity;
+
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class TabActivity1 extends Activity
 {
-
+	private SharedPreferences sp;
+	private Editor editor;
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
@@ -30,7 +37,8 @@ public class TabActivity1 extends Activity
 			setContentView(R.layout.tab_shuzi);
 		}*/
 		setContentView(R.layout.tab_zhineng);
-		
+		sp = getSharedPreferences(Setting.spfile, Context.MODE_PRIVATE);
+		editor = sp.edit();
 		
 		
 
@@ -43,11 +51,18 @@ public class TabActivity1 extends Activity
 			public void onClick(View v)
 			{
 				// TODO Auto-generated method stub
-				Intent intent = new Intent(TabActivity1.this,
-						BookingMainActivity.class);
-
-				startActivity(intent);
-				finish();
+				if(sp.getInt("total_cards",0)==0){
+					Toast.makeText(TabActivity1.this, "请先添加健康卡", Toast.LENGTH_SHORT).show();
+					Intent intent = new Intent(TabActivity1.this,ListCardActivity.class);
+					startActivity(intent);
+					finish();
+				}else{
+					Intent intent = new Intent(TabActivity1.this,
+							BookingMainActivity.class);
+	
+					startActivity(intent);
+					finish();
+				}
 			}
 		});
 

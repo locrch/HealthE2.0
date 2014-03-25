@@ -30,6 +30,7 @@ import com.pangu.neusoft.healthe.DepartmentListActivity;
 import com.pangu.neusoft.healthe.HospitalListActivity;
 import com.pangu.neusoft.healthe.R;
 import com.pangu.neusoft.healthe.Setting;
+import com.pangu.neusoft.healthe.TabActivity1;
 import com.pangu.neusoft.healthe.R.layout;
 import com.pangu.neusoft.healthe.R.menu;
 
@@ -168,11 +169,15 @@ public class ListCardActivity extends FatherActivity {
 			Setting.state="booking";
 			
 			if(Setting.bookingdata==null||Setting.bookingdata.getDoctorid()==null||Setting.bookingdata.getDoctorid().equals("")){
-		    	Intent intent = new Intent(ListCardActivity.this,BookingMainActivity.class);
-				Setting.state="booking";
-				startActivity(intent);
-				finish();
-		    	return;
+				if(!empty){
+			    	Intent intent = new Intent(ListCardActivity.this,BookingMainActivity.class);
+					Setting.state="booking";
+					startActivity(intent);
+					finish();
+				}else{
+					Toast.makeText(ListCardActivity.this, "请先添加健康卡", Toast.LENGTH_SHORT).show();
+				}
+				return;
 		    }
 				BookingAction booking=new BookingAction(ListCardActivity.this);
 				//设置预约基本信息
@@ -282,6 +287,8 @@ public class ListCardActivity extends FatherActivity {
 					}catch(Exception ex){
 						Log.e("error",ex.toString());
 						empty=true;
+						editor.putInt("total_cards", 0);
+						editor.commit();
 						arr.add("请添加健康卡");
 					}
 					String resultCode=obj.getProperty("resultCode").toString();//0000成功1111报错
