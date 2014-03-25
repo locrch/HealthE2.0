@@ -274,10 +274,10 @@ public class ListCardActivity extends FatherActivity {
 							editor.putInt("total_cards", areaObject.getPropertyCount());
 							editor.commit();
 							arr.add(showing);							
-							
+							empty=false;
 							
 						}	
-						empty=false;
+						
 					
 					}catch(Exception ex){
 						Log.e("error",ex.toString());
@@ -308,7 +308,7 @@ public class ListCardActivity extends FatherActivity {
 				            public void run()    
 				            {    
 				            	Intent intent= getIntent();
-				            	if(intent.getStringExtra("fromlogin")!=null&&intent.getStringExtra("fromlogin").equals("fromlogin")){
+				            	if(intent.getStringExtra("fromlogin")!=null&&intent.getStringExtra("fromlogin").equals("fromlogin")&&!empty){
 				            		finish();
 				            	}else{
 					            	showInList();
