@@ -299,7 +299,7 @@ public class HospitalDetailActivity extends FatherActivity {
 						hospital.setWebsite(website);
 						hospital.setZipCode(zipCode);
 						
-						//bus= GetBus("1000");
+						bus= GetBus(hospitalId);
 						
 					String resultCode=obj.getProperty("resultCode").toString();//0000成功1111报错
 					String msg=obj.getProperty("msg").toString();//返回的信息
@@ -334,7 +334,7 @@ public class HospitalDetailActivity extends FatherActivity {
 							hospitalTelephoneText.setText(hospital.getTelephone());
 							hospitalFaxText.setText(hospital.getFax());
 							hospitalWebSiteText.setText(hospital.getWebsite());
-							//hospitalbusText.setText(bus);
+							hospitalbusText.setText(bus);
 							
 							//pic.setText(hospital.getHospitalId());
 							hospitalWebSiteText.setOnClickListener(new OnClickListener()
@@ -408,25 +408,25 @@ public class HospitalDetailActivity extends FatherActivity {
 			//parser.require(XmlPullParser.START_TAG,null, "hospitalconfig");
 		    while (type != XmlPullParser.END_DOCUMENT) {
 		    	parser.next();
-		    	if (type == XmlPullParser.START_TAG)
-				{
+		    	type=parser.getEventType();
+		    	String name=parser.getName();
+		    	if (type == XmlPullParser.START_TAG){
 		    		String tagName = parser.getName();
 		    		if (tagName.equals("hospital"))
 					{
-		    			Map<String, String> map = new HashMap<String, String>();
-		    			String id = parser.getAttributeValue(null, "id");// 通过属性名来获取属性值
-		    			map.put("id", id);
+		    			//Map<String, String> map = new HashMap<String, String>();
+		    			String id = parser.getAttributeValue(0);// 通过属性名来获取属性值
+		    			//map.put("id", id);
 		    			String route = parser.getAttributeValue(1);// 通过属性索引来获取属性值
-		    			map.put("route", route);
-		    			map.put("name", parser.nextText());
-		    			list.add(map);
+		    			//map.put("route", route);
+		    			//map.put("name", parser.nextText());
+		    			//list.add(map);
+		    			if(id.equals(hospitalid)){
+		    				busline=route;
+		    				break;
+		    			}
 					}
-		    		
 				}
-		    	
-		    	
-		    		
-		    	
 		    }
 		} catch (MalformedURLException e)
 		{
