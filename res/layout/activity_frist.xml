@@ -47,15 +47,7 @@
         android:layout_marginTop="50dp"
          >
 
-        <Button
-            android:id="@+id/denglu"
-            android:layout_width="72dp"
-            android:layout_height="38dp"
-            android:layout_marginRight="30dp"
-            android:background="@layout/button_style"
-            android:text="登录"
-            android:textSize="@dimen/button_textsize" />
-
+        
         <Button
             android:id="@+id/zhuce"
             android:layout_width="72dp"
@@ -63,6 +55,16 @@
             android:background="@layout/button_style"
             android:text="注册"
             android:textSize="@dimen/button_textsize" />
+
+        <Button
+            android:id="@+id/denglu"
+            android:layout_width="72dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="30dp"
+            android:background="@layout/button_style"
+            android:text="登录"
+            android:textSize="@dimen/button_textsize" />
+        
     </LinearLayout>
 
 </RelativeLayout>

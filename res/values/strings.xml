@@ -38,6 +38,7 @@
     <string name="soft_updating">正在更新</string>
     <string name="soft_update_cancel">取消</string>
     <string name="serverurl">http://202.103.160.158:678/update.xml</string>
+    <string name="buslineurl">http://202.103.160.153:1001/BusInfo.xml</string>
     <string name="title_activity_set_text_size">字体设置</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_tab_activity4">增值服务</string>

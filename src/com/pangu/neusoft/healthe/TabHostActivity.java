@@ -75,22 +75,24 @@ public class TabHostActivity extends ActivityGroup
 			}
 		});
 		
-		intent = new Intent(this, TabActivity2.class);
-		//intent = new Intent(this, TabActivity2_dep227.class);
+		//intent = new Intent(this, TabActivity2.class);
+		intent = new Intent(this, TabActivity2_dep227.class);
 
 		View tab2Spec = mInflater.inflate(R.layout.tab2_spec, null);
 		tabHost.addTab(tabHost.newTabSpec("tab2").setIndicator(tab2Spec)
-				.setContent(intent));
-
-		intent = new Intent(this, TabActivity3.class);
-		View tab3Spec = mInflater.inflate(R.layout.tab3_spec, null);
-		tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator(tab3Spec)
 				.setContent(intent));
 
 		intent = new Intent(this, TabActivity4.class);
 		View tab4Spec = mInflater.inflate(R.layout.tab4_spec, null);
 		tabHost.addTab(tabHost.newTabSpec("tab4").setIndicator(tab4Spec)
 				.setContent(intent));
+		
+		intent = new Intent(this, TabActivity3.class);
+		View tab3Spec = mInflater.inflate(R.layout.tab3_spec, null);
+		tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator(tab3Spec)
+				.setContent(intent));
+
+		
 
 		intent = new Intent(this, TabActivity5.class);
 		View tab5Spec = mInflater.inflate(R.layout.tab5_spec, null);

@@ -142,11 +142,11 @@ public class ShowHistoryActivity extends FatherActivity  implements OnHeaderRefr
 				map.put("his_num", booking.getSerialNumber());
 				map.put("his_doctorid", booking.getDoctorid());
 				if(type.equals("booking")){
-					map.put("type", " 有效 ");
+					map.put("type", " 预约成功");
 				}else if(type.equals("cancled")){
 					map.put("type", "已取消");
 				}else{
-					map.put("type", "已过期");
+					map.put("type", "已爽约");
 				}
 				
 				hist_array.add(map);

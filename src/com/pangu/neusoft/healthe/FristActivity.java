@@ -156,6 +156,11 @@ public class FristActivity extends Activity
 			public void onClick(View v)
 			{
 				// TODO Auto-generated method stub
+				
+				if(FristActivity.this.sp.getString("username", "").equals("")){
+					Toast.makeText(FristActivity.this, "请先登录", Toast.LENGTH_SHORT).show();
+				}else{
+				
 				Intent intent = new Intent();
 
 				intent.putExtra("extra", "zhineng");
@@ -163,6 +168,7 @@ public class FristActivity extends Activity
 				intent.setClass(FristActivity.this, TabHostActivity.class);
 
 				startActivity(intent);
+				}
 			}
 		});
 

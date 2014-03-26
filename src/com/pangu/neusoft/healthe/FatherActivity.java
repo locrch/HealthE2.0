@@ -28,6 +28,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -49,8 +51,8 @@ public class FatherActivity extends Activity
 	Button back_index, back_back;
 	static TextView notice;
 	ActivityManager am ; 
-	
-	
+	SharedPreferences sp;
+	Editor editor;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -66,6 +68,8 @@ public class FatherActivity extends Activity
 		back_index = (Button) findViewById(R.id.back_index);
 		back_back = (Button) findViewById(R.id.back_back);
 		
+		sp = getSharedPreferences(Setting.spfile, Context.MODE_PRIVATE);
+		editor = sp.edit();
 		
 		
 		back_index.setOnClickListener(new OnClickListener()
@@ -75,13 +79,17 @@ public class FatherActivity extends Activity
 			public void onClick(View v)
 			{
 				// TODO Auto-generated method stub
+				if(sp.getString("username", "").equals("")){
+					Toast.makeText(getApplicationContext(), "请先登录", Toast.LENGTH_SHORT).show();
+				}else{
+				
 				Intent intent = new Intent(getApplicationContext(),
 						TabHostActivity.class);
 				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				startActivity(intent);
 
 				finish();
-
+				}
 			}
 		});
 

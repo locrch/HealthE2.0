@@ -1,9 +1,18 @@
 package com.pangu.neusoft.healthe;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.ksoap2.serialization.SoapObject;
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
 
 import com.geniusgithub.lazyloaddemo.cache.ImageLoader;
 import com.pangu.neusoft.adapters.HospitalList;
@@ -34,8 +43,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.content.res.XmlResourceParser;
 import android.graphics.Bitmap;
 import android.util.Log;
+import android.util.Xml;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
@@ -48,6 +59,7 @@ import android.widget.Gallery;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class HospitalDetailActivity extends FatherActivity {
 	private String hospitalId;
@@ -58,7 +70,8 @@ public class HospitalDetailActivity extends FatherActivity {
 	SharedPreferences sp;
 	Editor editor;
 	String[] args;
-	
+	String busline;
+	String bus;
 	private ImageView pic;
 	private TextView hospitalIdText;
 	private TextView hospitalNameText;
@@ -69,6 +82,7 @@ public class HospitalDetailActivity extends FatherActivity {
 	private TextView hospitalTelephoneText;
 	private TextView hospitalFaxText;
 	private TextView hospitalWebSiteText;
+	private TextView hospitalbusText;
 	//private AsyncBitmapLoader asyncImageLoader; 
 	
 	private ImageButton call_btn;
@@ -103,6 +117,8 @@ public class HospitalDetailActivity extends FatherActivity {
 		hospitalFaxText=(TextView)findViewById(R.id.hospital_detail_fax);
 		hospitalWebSiteText=(TextView)findViewById(R.id.hospital_detail_website);
 		pic=(ImageView)findViewById(R.id.hospital_detail_pictureurl);
+		
+		hospitalbusText=(TextView)findViewById(R.id.hospital_detail_bus);
 		//asyncImageLoader = new AsyncBitmapLoader();  
 		
 		//call_btn = (Button)findViewById(R.id.hospital_detail_call_btn);
@@ -242,6 +258,9 @@ public class HospitalDetailActivity extends FatherActivity {
 						String fax=areaObject.getProperty("fax").toString();
 						String website=areaObject.getProperty("website").toString();
 						
+						
+						
+						
 						SoapObject coordinatesObj=(SoapObject)areaObject.getProperty("coordinates");
 							 latitude=coordinatesObj.getProperty("latitude").toString();
 							 longitude=coordinatesObj.getProperty("longitude").toString();
@@ -280,6 +299,7 @@ public class HospitalDetailActivity extends FatherActivity {
 						hospital.setWebsite(website);
 						hospital.setZipCode(zipCode);
 						
+						//bus= GetBus("1000");
 						
 					String resultCode=obj.getProperty("resultCode").toString();//0000成功1111报错
 					String msg=obj.getProperty("msg").toString();//返回的信息
@@ -314,6 +334,8 @@ public class HospitalDetailActivity extends FatherActivity {
 							hospitalTelephoneText.setText(hospital.getTelephone());
 							hospitalFaxText.setText(hospital.getFax());
 							hospitalWebSiteText.setText(hospital.getWebsite());
+							//hospitalbusText.setText(bus);
+							
 							//pic.setText(hospital.getHospitalId());
 							hospitalWebSiteText.setOnClickListener(new OnClickListener()
 							{
@@ -364,7 +386,65 @@ public class HospitalDetailActivity extends FatherActivity {
 	}
 	
 	
-	
+	private String GetBus(String hospitalid)
+	{
+		List<Map<String, String>> list = new ArrayList<Map<String, String>>();
+		
+		String path = HospitalDetailActivity.this.getResources().getString(R.string.buslineurl);  
+        //包装成url的对象   
+        URL url;
+		try
+		{
+			url = new URL(path);
+			
+			HttpURLConnection conn =  (HttpURLConnection) url.openConnection();   
+	        conn.setConnectTimeout(50000);  
+	        InputStream is =conn.getInputStream();
+	        
+	        XmlPullParser  parser = Xml.newPullParser();  
+	        
+		    parser.setInput(is, "utf-8");//设置解析的数据源   
+		    int type = parser.getEventType();
+			//parser.require(XmlPullParser.START_TAG,null, "hospitalconfig");
+		    while (type != XmlPullParser.END_DOCUMENT) {
+		    	parser.next();
+		    	if (type == XmlPullParser.START_TAG)
+				{
+		    		String tagName = parser.getName();
+		    		if (tagName.equals("hospital"))
+					{
+		    			Map<String, String> map = new HashMap<String, String>();
+		    			String id = parser.getAttributeValue(null, "id");// 通过属性名来获取属性值
+		    			map.put("id", id);
+		    			String route = parser.getAttributeValue(1);// 通过属性索引来获取属性值
+		    			map.put("route", route);
+		    			map.put("name", parser.nextText());
+		    			list.add(map);
+					}
+		    		
+				}
+		    	
+		    	
+		    		
+		    	
+		    }
+		} catch (MalformedURLException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}  
+		catch (XmlPullParserException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return busline;
+	}
 
 
 

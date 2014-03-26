@@ -111,7 +111,7 @@ public class HistoryListAdapter extends SimpleAdapter{
 		});
 		
 		final TextView his_state=(TextView)res.findViewById(R.id.his_state);
-		if(his_state.getText().toString().equals(" 有效 ")){
+		if(his_state.getText().toString().equals("预约成功")){
 			//有效状态背景
 			his_state.setBackgroundResource(R.drawable.booking_info_status_effective_bg);
 			his_state.setTextColor(Color.WHITE);
@@ -151,13 +151,13 @@ public class HistoryListAdapter extends SimpleAdapter{
 			his_cancle_btn.setOnClickListener(new OnClickListener(){
 				@Override
 				public void onClick(View arg0) {
-					Toast.makeText(activity, "已经被取消！", Toast.LENGTH_SHORT).show();
+					Toast.makeText(activity, "已取消！", Toast.LENGTH_SHORT).show();
 				}
 			});
 			his_detail_btn.setOnClickListener(new OnClickListener(){
 				@Override
 				public void onClick(View arg0) {
-					Toast.makeText(activity, "已经被取消！", Toast.LENGTH_SHORT).show();
+					Toast.makeText(activity, "已取消！", Toast.LENGTH_SHORT).show();
 				}
 			});
 		}else{
@@ -169,13 +169,13 @@ public class HistoryListAdapter extends SimpleAdapter{
 			his_cancle_btn.setOnClickListener(new OnClickListener(){
 				@Override
 				public void onClick(View arg0) {
-					Toast.makeText(activity, "已经过期", Toast.LENGTH_SHORT).show();
+					Toast.makeText(activity, "已爽约", Toast.LENGTH_SHORT).show();
 				}
 			});
 			his_detail_btn.setOnClickListener(new OnClickListener(){
 				@Override
 				public void onClick(View arg0) {
-					Toast.makeText(activity, "已经过期", Toast.LENGTH_SHORT).show();
+					Toast.makeText(activity, "已爽约", Toast.LENGTH_SHORT).show();
 				}
 			});
 		}
