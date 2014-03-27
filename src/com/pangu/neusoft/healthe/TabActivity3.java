@@ -92,6 +92,7 @@ public class TabActivity3 extends Activity {
 		
 		Islogin();
 	    
+		tab3_login.setVisibility(View.INVISIBLE);
 	}
 	//修改密码
 	OnClickListener chang_pass_click = new OnClickListener()

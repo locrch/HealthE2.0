@@ -97,7 +97,8 @@
         android:background="@layout/edittext_style"
         android:ems="10"
         android:inputType="textPassword"
-        android:paddingLeft="5dp" />
+        android:paddingLeft="5dp"
+        android:hint="请输入6位数密码" />
 
     <TextView
         android:id="@+id/seria_num"

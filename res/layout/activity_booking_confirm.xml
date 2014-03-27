@@ -91,6 +91,14 @@
                             android:textColor="@color/red"
                             android:textSize="@dimen/detail_content_textsize" />
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/activity_booking_confirm_tie"
+                        android:layout_marginLeft="80dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="（点击可以变更健康卡号）" />
+
                 </LinearLayout>
 
                 <LinearLayout
