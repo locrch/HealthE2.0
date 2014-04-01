@@ -30,10 +30,11 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:background="@layout/button_style"
-        android:text="变更" />
+        android:text="切换" />
 
     
     <com.pangu.neusoft.adapters.PullToRefreshView 
+        android:layout_marginTop="40dp"
     android:id="@+id/main_pull_refresh_view"
     android:background="@android:color/white"
     android:layout_width="fill_parent"
@@ -53,4 +54,17 @@
          />
 
 </com.pangu.neusoft.adapters.PullToRefreshView>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/main_pull_refresh_view"
+        android:layout_alignRight="@+id/main_pull_refresh_view"
+        android:layout_below="@+id/user_card_text"
+        android:layout_marginTop="3dp"
+        android:text="（点击切换可选择健康卡）"
+        android:gravity="right"
+        android:textSize="@dimen/button_textsize" />
+
 </RelativeLayout>

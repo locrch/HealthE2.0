@@ -12,7 +12,7 @@
         android:layout_alignTop="@+id/seria_num"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="58dp"
-        android:text="佛山市卫生局" />
+        android:text="佛山市卫生和计划生育局" />
 
     <TextView
         android:id="@+id/seria_num"

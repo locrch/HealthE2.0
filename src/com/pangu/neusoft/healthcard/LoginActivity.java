@@ -253,8 +253,8 @@ public class LoginActivity extends FatherActivity {
 										editor.commit();
 									}
 									
-									editor.putString("username", member.getUserName());
-									editor.putString("password", member.getPassword());
+									editor.putString("username", member.getUserName()+"");
+									editor.putString("password", member.getPassword()+"");
 									editor.putBoolean("loginsuccess",true);
 									editor.putString("defaultcardno","0");
 									editor.commit();

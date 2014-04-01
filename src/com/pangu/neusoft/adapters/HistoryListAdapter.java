@@ -116,7 +116,7 @@ public class HistoryListAdapter extends SimpleAdapter{
 			his_state.setBackgroundResource(R.drawable.booking_info_status_effective_bg);
 			his_state.setTextColor(Color.WHITE);
 			his_cancle_btn.setVisibility(View.VISIBLE);
-			his_detail_btn.setVisibility(View.INVISIBLE);
+			//his_detail_btn.setVisibility(View.INVISIBLE);
 			his_cancle_btn.setOnClickListener(new OnClickListener(){
 				@Override
 				public void onClick(View arg0) {
@@ -147,17 +147,25 @@ public class HistoryListAdapter extends SimpleAdapter{
 			his_state.setBackgroundResource(R.drawable.booking_info_status_fail_bg);
 			his_state.setTextColor(Color.BLACK);
 			his_cancle_btn.setVisibility(View.GONE);
-			his_detail_btn.setVisibility(View.GONE);
-			his_cancle_btn.setOnClickListener(new OnClickListener(){
-				@Override
-				public void onClick(View arg0) {
-					Toast.makeText(activity, "已取消！", Toast.LENGTH_SHORT).show();
-				}
-			});
+			//his_detail_btn.setVisibility(View.GONE);
+//			his_cancle_btn.setOnClickListener(new OnClickListener(){
+//				@Override
+//				public void onClick(View arg0) {
+//					Toast.makeText(activity, "已取消！", Toast.LENGTH_SHORT).show();
+//				}
+//			});
 			his_detail_btn.setOnClickListener(new OnClickListener(){
 				@Override
 				public void onClick(View arg0) {
-					Toast.makeText(activity, "已取消！", Toast.LENGTH_SHORT).show();
+					if(showing_detail){
+						his_detail_btn.setText("详细");
+						his_detail.setVisibility(View.GONE);
+						showing_detail=false;
+					}else{      
+						his_detail_btn.setText("收起");
+						his_detail.setVisibility(View.VISIBLE);
+						showing_detail=true;
+					}
 				}
 			});
 		}else{
@@ -165,17 +173,25 @@ public class HistoryListAdapter extends SimpleAdapter{
 			his_state.setBackgroundResource(R.drawable.booking_info_status_expired_bg);
 			his_state.setTextColor(Color.BLACK);
 			his_cancle_btn.setVisibility(View.GONE);
-			his_detail_btn.setVisibility(View.GONE);
-			his_cancle_btn.setOnClickListener(new OnClickListener(){
-				@Override
-				public void onClick(View arg0) {
-					Toast.makeText(activity, "已爽约", Toast.LENGTH_SHORT).show();
-				}
-			});
+			//his_detail_btn.setVisibility(View.GONE);
+//			his_cancle_btn.setOnClickListener(new OnClickListener(){
+//				@Override
+//				public void onClick(View arg0) {
+//					Toast.makeText(activity, "已到期", Toast.LENGTH_SHORT).show();
+//				}
+//			});
 			his_detail_btn.setOnClickListener(new OnClickListener(){
 				@Override
 				public void onClick(View arg0) {
-					Toast.makeText(activity, "已爽约", Toast.LENGTH_SHORT).show();
+					if(showing_detail){
+						his_detail_btn.setText("详细");
+						his_detail.setVisibility(View.GONE);
+						showing_detail=false;
+					}else{      
+						his_detail_btn.setText("收起");
+						his_detail.setVisibility(View.VISIBLE);
+						showing_detail=true;
+					}
 				}
 			});
 		}
@@ -187,7 +203,13 @@ public class HistoryListAdapter extends SimpleAdapter{
 			//his_list_layout.setBackgroundDrawable(activity.getResources().getDrawable(R.layout.schedule_btn_style_layout));
 		}
 		
-		
+		if(position==0){
+			
+				his_detail_btn.setText("收起");
+				his_detail.setVisibility(View.VISIBLE);
+				showing_detail=true;
+			
+		}
 		
 		
 		return res;

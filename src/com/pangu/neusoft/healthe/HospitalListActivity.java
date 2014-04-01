@@ -156,8 +156,8 @@ public class HospitalListActivity extends FatherActivity {
 				}
 				
 				HospitalReq req=new HospitalReq();
-				
-				req.setAreaID(sp.getString("areaId", ""));
+				String areaid=sp.getString("areaId", "");
+				req.setAreaID(areaid);
 				req.setAucode(GET.Aucode);
 				SoapObject  obj = service.getHospitalList(req);
 				
@@ -262,6 +262,9 @@ public class HospitalListActivity extends FatherActivity {
 								startActivity(new Intent (HospitalListActivity.this, DepartmentListActivity.class));
 								//finish();
 							
+								Dialog tips = new Dialog(getApplicationContext());
+								
+								
 						}
 					});
 				}else{

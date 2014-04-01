@@ -257,8 +257,14 @@ public class RegisterActivity extends FatherActivity
 								if (!member.getUserName().equals(
 										sp.getString("username", "")))
 								{
-									int totalcards = sp
-											.getInt("total_cards", 0);
+									int totalcards = 0;
+									try{
+										totalcards =sp.getInt("total_cards", 0);
+									}catch(Exception ex){	
+										ex.printStackTrace();
+									}
+									 
+									
 									for (int i = 0; i < totalcards; i++)
 									{
 										editor.remove("card" + i + "_"

@@ -15,7 +15,7 @@ public class MemoryCache {
 	// 放入缓存时是个同步操作
 	// LinkedHashMap构造方法的最后一个参数true代表这个map里的元素将按照最近使用次数由少到多排列，即LRU
 	// 这样的好处是如果要将缓存中的元素替换，则先遍历出最近最少使用的元素来替换以提高效率
-	private Map<String, Bitmap> cache = Collections
+	private static Map<String, Bitmap> cache = Collections
 			.synchronizedMap(new LinkedHashMap<String, Bitmap>(10, 1.5f, true));
 	// 缓存中图片所占用的字节，初始0，将通过此变量严格控制缓存所占用的堆内存
 	private long size = 0;// current allocated size

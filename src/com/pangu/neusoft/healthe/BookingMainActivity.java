@@ -125,6 +125,8 @@ public class BookingMainActivity extends FatherActivity {
 		service = new WebService();
 		getScreenSize();
 
+		
+		
 		// select_spinner = (Spinner) findViewById(R.id.spinner1);
 		SpinnerAdapter adapter = new SpinnerAdapter(this,
 				android.R.layout.simple_spinner_item, select);
@@ -247,7 +249,13 @@ public class BookingMainActivity extends FatherActivity {
 		if (message != null && !message.equals("")) {
 			SetNotice(message);
 		}
-
+		
+		//不使用地区
+				editor.putString("areaId", "440600");
+				editor.putString("areaName", "佛山市");
+				editor.commit();
+				select_area_btn.setVisibility(View.INVISIBLE);
+		
 	}
 
 	public void setItemSize() {
