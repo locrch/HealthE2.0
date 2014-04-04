@@ -627,18 +627,26 @@ public class BookingMainActivity extends FatherActivity {
 		areaId = sp.getString("areaId", "NG");
 		areaName = sp.getString("areaName", "地区");
 		select_area_btn.setText(areaName);
-
+		
+		String step1,step2,step3;
+		
+		step1 = "第1步";
+		
+		step2 = "第2步";
+		
+		step3 = "第3步";
+		
 		hospitalId = sp.getString("hospitalId", "NG");
 		hospitalName = sp.getString("hospitalName", "请选择医院");
-		hospital.setText(hospitalName);
+		hospital.setText(step1+hospitalName);
 
 		departmentId = sp.getString("departmentId", "NG");
 		departmentName = sp.getString("departmentName", "请选择科室");
-		department.setText(departmentName);
+		department.setText(step2+departmentName);
 
 		doctorId = sp.getString("doctorId", "NG");
 		doctorName = sp.getString("doctorName", "请选择医生");
-		doctor.setText(doctorName);
+		doctor.setText(step3+doctorName);
 
 	}
 
@@ -717,7 +725,7 @@ public class BookingMainActivity extends FatherActivity {
 			// android.
 			// android.R.layout.simple_spinner_item is default layout in
 			// resources of android.
-
+			
 			TextView tv = (TextView) convertView
 					.findViewById(android.R.id.text1);
 			tv.setText(items[position]);

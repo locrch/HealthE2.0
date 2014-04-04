@@ -63,8 +63,8 @@
         android:layout_alignRight="@+id/main_pull_refresh_view"
         android:layout_below="@+id/user_card_text"
         android:layout_marginTop="3dp"
-        android:text="（点击切换可选择健康卡）"
+        android:text="（点击“切换”按钮可选择其他健康卡）"
         android:gravity="right"
-        android:textSize="@dimen/button_textsize" />
+        android:textSize="14dp" />
 
 </RelativeLayout>

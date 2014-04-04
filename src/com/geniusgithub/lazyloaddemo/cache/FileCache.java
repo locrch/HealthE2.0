@@ -1,6 +1,5 @@
 package com.geniusgithub.lazyloaddemo.cache;
 
-import java.io.File;
 
 import com.geniusgithub.lazyloaddemo.util.FileManager;
 
