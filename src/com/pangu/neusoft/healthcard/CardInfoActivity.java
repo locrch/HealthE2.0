@@ -136,7 +136,7 @@ public class CardInfoActivity extends FatherActivity {
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
-			BookingAction bookingaction=new BookingAction(CardInfoActivity.this);
+			DemoBookingAction bookingaction=new DemoBookingAction(CardInfoActivity.this);
 			bookingaction.confirmBooking();	
 		}
 

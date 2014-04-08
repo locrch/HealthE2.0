@@ -179,7 +179,7 @@ public class ListCardActivity extends FatherActivity {
 				}
 				return;
 		    }
-				BookingAction booking=new BookingAction(ListCardActivity.this);
+			DemoBookingAction booking=new DemoBookingAction(ListCardActivity.this);
 				//设置预约基本信息
 				Setting.setDefaultCardNumber(sp,editor);
 				booking.confirmBooking();
