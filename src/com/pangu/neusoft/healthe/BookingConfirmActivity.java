@@ -1,6 +1,7 @@
 package com.pangu.neusoft.healthe;
 
 import com.pangu.neusoft.healthcard.BookingAction;
+import com.pangu.neusoft.healthcard.DemoBookingAction;
 import com.pangu.neusoft.healthcard.ListCardActivity;
 
 import android.os.Bundle;
@@ -23,7 +24,7 @@ public class BookingConfirmActivity extends FatherActivity
 	LinearLayout linearLayout_1,linearLayout_2,linearLayout_3,linearLayout_4,linearLayout_5,linearLayout_6,
 	linearLayout_7,linearLayout_8,linearLayout_9;
 	Button conbbtn,cancelbtn;
-	BookingAction bookingaction; 
+	DemoBookingAction bookingaction; 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -65,7 +66,7 @@ public class BookingConfirmActivity extends FatherActivity
 	    conbbtn = (Button)findViewById(R.id.booking_confirm_conbbtn);
 	    cancelbtn = (Button)findViewById(R.id.booking_confirm_cancelbtn);
 	    
-	    bookingaction=new BookingAction(BookingConfirmActivity.this);
+	    bookingaction=new DemoBookingAction(BookingConfirmActivity.this);
 	    
 	    conbbtn.setOnClickListener(new OnClickListener()
 		{

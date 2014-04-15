@@ -30,6 +30,7 @@ import com.pangu.neusoft.core.models.BookingReq;
 import com.pangu.neusoft.core.models.Schedule;
 import com.pangu.neusoft.core.models.ScheduleButton;
 import com.pangu.neusoft.healthcard.BookingAction;
+import com.pangu.neusoft.healthcard.DemoBookingAction;
 import com.pangu.neusoft.healthcard.ListCardActivity;
 import com.pangu.neusoft.healthcard.LoginActivity;
 import com.pangu.neusoft.tools.SortListByItem;
@@ -256,7 +257,7 @@ public class SchedultLayout {
 		 												if(!sp.getString("defaultcardno","").equals("")){
 		 													
 		 													Setting.setDefaultCardNumber(sp,editor);
-		 													BookingAction action=new BookingAction(activity);
+		 													DemoBookingAction action=new DemoBookingAction(activity);
 		 													action.confirmBooking();
 		 												}else{
 	 														activity.startActivity(new Intent(activity,ListCardActivity.class));

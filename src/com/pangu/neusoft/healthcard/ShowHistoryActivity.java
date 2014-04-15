@@ -7,6 +7,7 @@ import java.util.List;
 import org.ksoap2.serialization.SoapObject;
 
 import com.baidu.mobstat.StatService;
+import com.pangu.neusoft.adapters.DemoHistoryListAdapter;
 import com.pangu.neusoft.adapters.HistoryListAdapter;
 import com.pangu.neusoft.adapters.PullToRefreshView.OnFooterRefreshListener;
 import com.pangu.neusoft.adapters.PullToRefreshView.OnHeaderRefreshListener;
@@ -62,7 +63,7 @@ public class ShowHistoryActivity extends FatherActivity  implements OnHeaderRefr
 	public DBManager mgr;
 	String username;
 	//List<BookingInfos> list;
-	HistoryListAdapter adapter;
+	DemoHistoryListAdapter adapter;
 	
 	//String cancleid;
 	//String hospitalid;
@@ -180,7 +181,7 @@ public class ShowHistoryActivity extends FatherActivity  implements OnHeaderRefr
 		        	}
 		        }
 		        if(hist_array_temp.size()>0){
-			        adapter=new HistoryListAdapter(
+			        adapter=new DemoHistoryListAdapter(
 								this,hist_array_temp,R.layout.history_content,new String[]
 
 {"his_username","his_doctor","his_num","his_time","his_hospitalid","his_doctorid","type","his_cancle_id","his_department","his_hospital"},

@@ -22,7 +22,6 @@ import com.geniusgithub.lazyloaddemo.cache.ImageLoader;
 import com.pangu.neusoft.core.models.ConnectDoctor;
 import com.pangu.neusoft.core.models.Schedule;
 import com.pangu.neusoft.core.models.ScheduleButton;
-import com.pangu.neusoft.healthcard.BookingAction;
 import com.pangu.neusoft.healthcard.CreateCardActivity;
 import com.pangu.neusoft.healthcard.ListCardActivity;
 import com.pangu.neusoft.healthcard.LoginActivity;

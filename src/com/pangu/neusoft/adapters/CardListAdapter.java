@@ -6,6 +6,7 @@ import java.util.Map;
 import com.pangu.neusoft.core.models.MedicalCard;
 import com.pangu.neusoft.healthcard.BookingAction;
 import com.pangu.neusoft.healthcard.CardInfoActivity;
+import com.pangu.neusoft.healthcard.DemoBookingAction;
 import com.pangu.neusoft.healthcard.ListCardActivity;
 import com.pangu.neusoft.healthcard.ShowHistoryActivity;
 import com.pangu.neusoft.healthe.R;
@@ -95,7 +96,7 @@ public class CardListAdapter extends SimpleAdapter{
 					}
 					ListCardActivity.temp=namebox;
 					if(Setting.state.equals("booking")&&Setting.bookingdata!=null){
-						BookingAction booking=new BookingAction(activity);
+						DemoBookingAction booking=new DemoBookingAction(activity);
 						//设置预约基本信息
 						Setting.setDefaultCardNumber(sp,editor);
 						booking.confirmBooking();

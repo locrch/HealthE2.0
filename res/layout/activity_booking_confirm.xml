@@ -106,8 +106,9 @@
                     android:layout_height="wrap_content"
                     android:divider="@drawable/line"
                     android:dividerPadding="12dp"
+                    android:showDividers="end"
                     android:orientation="vertical"
-                    android:showDividers="end" >
+                     >
 
                     <LinearLayout
                         android:id="@+id/linearLayout_3"

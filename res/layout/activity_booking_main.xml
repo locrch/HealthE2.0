@@ -14,7 +14,7 @@
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:paddingBottom="10dp" >
-
+			
             <Button
                 android:id="@+id/doctor_hospital1"
                 android:layout_width="50dp"
@@ -54,11 +54,17 @@
                     android:background="@drawable/search_btn" >
                 </ImageButton>
             </RelativeLayout>
-
+			<RelativeLayout 
+			    android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:background="@drawable/line"
+                android:layout_below="@+id/search_layout"
+			    ></RelativeLayout>
             <TextView
                 android:id="@+id/booking_main_welcome_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/search_layout"
                 android:layout_toLeftOf="@+id/select_area_btn"
@@ -70,6 +76,7 @@
                 android:id="@+id/select_area_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:layout_alignBottom="@+id/booking_main_welcome_content"
                 android:layout_alignLeft="@+id/booking_btn"
                 android:layout_alignParentRight="true"
@@ -212,7 +219,8 @@
         android:layout_height="match_parent"
         android:content="@+id/content"
         android:handle="@+id/booking_knower_btn"
-        android:topOffset="0dp" >
+        android:topOffset="0dp"
+         >
 
         <ImageView
             android:id="@+id/booking_knower_btn"

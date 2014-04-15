@@ -630,11 +630,11 @@ public class BookingMainActivity extends FatherActivity {
 		
 		String step1,step2,step3;
 		
-		step1 = "第1步";
+		step1 = "第1步：   ";
 		
-		step2 = "第2步";
+		step2 = "第2步：   ";
 		
-		step3 = "第3步";
+		step3 = "第3步：   ";
 		
 		hospitalId = sp.getString("hospitalId", "NG");
 		hospitalName = sp.getString("hospitalName", "请选择医院");
