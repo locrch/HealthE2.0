@@ -50,7 +50,13 @@
             android:text="个人信息"
             android:textSize="@dimen/button_textsize"
              />
-	
+		<Button
+            android:id="@+id/change_username"
+            android:layout_width="@dimen/tab_button_width"
+            android:layout_height="@dimen/tab_button_height"
+            android:background="@layout/tab_btn_press"
+            android:text="修改用户名"
+            android:textSize="@dimen/button_textsize" />
         <Button
             android:id="@+id/change_pass"
             android:layout_width="@dimen/tab_button_width"

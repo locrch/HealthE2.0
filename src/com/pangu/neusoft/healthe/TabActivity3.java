@@ -12,6 +12,7 @@ import com.pangu.neusoft.core.models.HandleBooking;
 import com.pangu.neusoft.db.DBManager;
 import com.pangu.neusoft.tools.DialogShow;
 import com.pangu.neusoft.healthcard.ChangePassActivity;
+import com.pangu.neusoft.healthcard.ChangeUsernameActivity;
 import com.pangu.neusoft.healthcard.ConnectListActivity;
 import com.pangu.neusoft.healthcard.ListCardActivity;
 import com.pangu.neusoft.healthcard.LoginActivity;
@@ -54,7 +55,7 @@ public class TabActivity3 extends Activity {
 	Button change_pass;//个人信息
 	Button tab3_cleanDB;//清理缓存
 	Button tab3_settextsize;//设置字体
-	
+	Button change_username;
 	TextView textview1,tab3_welcome_text;
 	DBManager mgr;
 	
@@ -74,7 +75,7 @@ public class TabActivity3 extends Activity {
 		
 		user_info=(Button)findViewById(R.id.user_info);
 		change_pass=(Button)findViewById(R.id.change_pass);
-		
+		change_username = (Button)findViewById(R.id.change_username);
 		tab3_cleanDB=(Button)findViewById(R.id.tab3_cleanDB);
 		tab3_settextsize=(Button)findViewById(R.id.tab3_settextsize);
 		
@@ -85,6 +86,7 @@ public class TabActivity3 extends Activity {
 		user_info.setOnClickListener(user_info_click);
 		tab3_cleanDB.setOnClickListener(cleanDB_click);
 		tab3_settextsize.setOnClickListener(settextsize_click);
+		change_username.setOnClickListener(change_username_click);
 		change_pass.setOnClickListener(chang_pass_click);
 		Setting.bookingdata=null;//清除本次预约数据
 		editor.putString("now_state", "usersetting");
@@ -94,6 +96,18 @@ public class TabActivity3 extends Activity {
 	    
 		tab3_login.setVisibility(View.INVISIBLE);
 	}
+	//修改用户名
+	OnClickListener change_username_click = new OnClickListener()
+	{
+		
+		@Override
+		public void onClick(View v)
+		{
+			startActivity(new Intent(TabActivity3.this,ChangeUsernameActivity.class));
+			
+		}
+	};
+	
 	//修改密码
 	OnClickListener chang_pass_click = new OnClickListener()
 	{
