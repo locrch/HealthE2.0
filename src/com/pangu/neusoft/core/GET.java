@@ -77,6 +77,8 @@ public interface GET
 			
 			MethodName.put("GetPreferentialNews", "DS_GetPreferentialNews");
 			
+			MethodName.put("ModifyUserName", "ModifyUserName");
+			
 			return MethodName.get(i);
 		}
 		

@@ -326,7 +326,6 @@ public class RegisterActivity extends FatherActivity
 							person.setAddress("");
 							person.setLicence_num(card_num.getText().toString());
 							person.setLicence_type("身份证");
-
 							mgr.add(person);
 
 							final Timer t = new Timer();

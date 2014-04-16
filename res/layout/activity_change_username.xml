@@ -27,6 +27,7 @@
             android:layout_toRightOf="@+id/changeusername_oldname_label"
             android:background="@layout/edittext_style"
             android:ems="10"
+            android:enabled="false"
             android:paddingLeft="5dp" />
 
     </RelativeLayout>
