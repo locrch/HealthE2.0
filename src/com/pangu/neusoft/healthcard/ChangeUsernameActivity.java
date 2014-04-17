@@ -142,7 +142,7 @@ public class ChangeUsernameActivity extends FatherActivity{
 							ChangeUsernameReq req=new ChangeUsernameReq();
 							req.setUserName(oldname.getText().toString());
 							req.setNewPhoneNumber(newname.getText().toString());
-							 //req.setCAPTCHA(ver.getText().toString());
+							 req.setCAPTCHA(ver.getText().toString());
 							 req.setAucode(GET.Aucode);
 							 
 							 SoapObject obj= service.modifyUsername(req,"ModifyUserName");

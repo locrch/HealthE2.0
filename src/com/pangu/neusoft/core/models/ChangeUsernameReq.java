@@ -8,7 +8,7 @@ import org.ksoap2.serialization.PropertyInfo;
 public class ChangeUsernameReq  implements KvmSerializable{
 	private String UserName;
 	private String NewPhoneNumber;
-	//private String CAPTCHA;	
+	private String CAPTCHA;	
 	private String Aucode;
 	
 	
@@ -25,12 +25,12 @@ public class ChangeUsernameReq  implements KvmSerializable{
 	public void setNewPhoneNumber(String newPhoneNumber) {
 		NewPhoneNumber = newPhoneNumber;
 	}
-//	public String getCAPTCHA() {
-//		return CAPTCHA;
-//	}
-//	public void setCAPTCHA(String cAPTCHA) {
-//		CAPTCHA = cAPTCHA;
-//	}
+	public String getCAPTCHA() {
+		return CAPTCHA;
+	}
+	public void setCAPTCHA(String cAPTCHA) {
+		CAPTCHA = cAPTCHA;
+	}
 	public String getAucode() {
 		return Aucode;
 	}
@@ -45,8 +45,8 @@ public class ChangeUsernameReq  implements KvmSerializable{
 		case 1:
 			return NewPhoneNumber;
 		case 2:
-//			return CAPTCHA;
-//		case 3:
+			return CAPTCHA;
+		case 3:
 			return Aucode;
 		}
 		return null;
@@ -54,8 +54,7 @@ public class ChangeUsernameReq  implements KvmSerializable{
 	@Override
 	public int getPropertyCount() {
 		// TODO Auto-generated method stub
-//		return 4;
-		return 3;
+		return 4;
 	}
 	@Override
 	public void getPropertyInfo(int index, Hashtable arg1, PropertyInfo info) {
@@ -69,10 +68,10 @@ public class ChangeUsernameReq  implements KvmSerializable{
 			info.name = "NewPhoneNumber";
 			break;	
 		case 2:
-//			info.type = PropertyInfo.STRING_CLASS;
-//			info.name = "CAPTCHA";
-//			break;	
-//		case 3:
+			info.type = PropertyInfo.STRING_CLASS;
+			info.name = "CAPTCHA";
+			break;	
+		case 3:
 			info.type = PropertyInfo.STRING_CLASS;
 			info.name = "Aucode";
 			break;	
@@ -90,9 +89,9 @@ public class ChangeUsernameReq  implements KvmSerializable{
 			NewPhoneNumber=value.toString();
 			break;
 		case 2:
-//			CAPTCHA = value.toString();
-//			break;
-//		case 3:
+			CAPTCHA = value.toString();
+			break;
+		case 3:
 			Aucode = value.toString();
 			break;	
 		default:
