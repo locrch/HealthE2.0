@@ -177,8 +177,12 @@ public class ChangeUsernameActivity extends FatherActivity{
 							DialogShow.showDialog(ChangeUsernameActivity.this, msg);
 							if(result){
 								editor.putString("username", newname.getText().toString());
-								editor.commit();
 								
+								for(int i=0;i<5;i++)
+									editor.remove("card"+i+"_"+"owner");				
+						    	editor.remove("card" + sp.getString("defaultcardno", "")+ "_" + "owner");
+								editor.remove("defaultcardno");				
+						    	editor.commit();
 //								DBManager mgr=new DBManager(ChangeUsernameActivity.this);
 //								People person= mgr.queryByName(oldname.getText().toString());
 //								person.setPhone(newname.getText().toString());

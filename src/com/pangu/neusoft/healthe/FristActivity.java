@@ -268,6 +268,7 @@ public class FristActivity extends Activity
 						editor.remove("username");
 						editor.remove("password");
 						editor.remove("loginsuccess");
+						editor.remove("card" + sp.getString("defaultcardno", "")+ "_" + "owner");
 						editor.remove("defaultcardno");
 						editor.commit();
 						denglu.setText("登录");
@@ -290,6 +291,8 @@ public class FristActivity extends Activity
 	private void Islogin()
 	{
 		// 判断登录状态
+		//Toast.makeText(FristActivity.this, "username:"+sp.getString("username", ""),Toast.LENGTH_SHORT).show();
+		
 		if (sp.getString("username", "").equals(""))
 		{
 			denglu.setText("登录");
