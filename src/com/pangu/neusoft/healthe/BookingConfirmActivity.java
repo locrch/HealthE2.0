@@ -24,7 +24,7 @@ public class BookingConfirmActivity extends FatherActivity
 	LinearLayout linearLayout_1,linearLayout_2,linearLayout_3,linearLayout_4,linearLayout_5,linearLayout_6,
 	linearLayout_7,linearLayout_8,linearLayout_9;
 	Button conbbtn,cancelbtn;
-	DemoBookingAction bookingaction; 
+	BookingAction bookingaction; 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -66,7 +66,7 @@ public class BookingConfirmActivity extends FatherActivity
 	    conbbtn = (Button)findViewById(R.id.booking_confirm_conbbtn);
 	    cancelbtn = (Button)findViewById(R.id.booking_confirm_cancelbtn);
 	    
-	    bookingaction=new DemoBookingAction(BookingConfirmActivity.this);
+	    bookingaction=new BookingAction(BookingConfirmActivity.this);
 	    
 	    conbbtn.setOnClickListener(new OnClickListener()
 		{
