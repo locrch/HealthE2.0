@@ -13,8 +13,9 @@ public interface GET
 {
 	public static final String Aucode = "QWERTYUIOP";
 	//联调请更改此处
+	
 	public static final String URL ="http://202.103.160.153:1001/HealthCarePlatform.asmx";
-	//public static final String URL ="http://192.168.2.236:1001/HealthCarePlatform.asmx";
+	//public static final String URL ="http://192.168.0.116:1001/HealthCarePlatform.asmx";
 	public static final String NAMESPACE = "http://tempuri.org/";
 	//public static final String cityId="440600";
 	// 改变方法名即可调用接口内其他方法，且同时改变输入参数名和参数值，否则返回报错

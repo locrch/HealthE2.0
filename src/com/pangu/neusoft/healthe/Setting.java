@@ -41,8 +41,8 @@ public class Setting {
 	
 	public static String check_url = "http://202.103.160.158:678/V1/HealthE.apk";//软件更新apk
 	//public static String SerialNumber;
-	public static String link="http://219.130.221.120:10804/smjkfw/wsyygh/pages/jkw_login_dx.jsp?redirect=http://202.103.160.158:1001/MedicalCardPage/receive.aspx&wxid=";
-	
+	//public static String link="http://219.130.221.120:10804/smjkfw/wsyygh/pages/jkw_login_dx.jsp?redirect=http://202.103.160.158:1001/MedicalCardPage/receive.aspx&wxid=";
+	public static String link="http://219.130.221.120/smjkfw/wsyygh/pages/jkw_login_dx.jsp?redirect=http://202.103.160.153:1001/MedicalCardPage/receive.aspx&wxid=";
 	public static int cols=3;//一行显示多少个 医生排班日期
 	public static String state="booking";
 	public static BookingInfos bookingdata;

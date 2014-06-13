@@ -31,7 +31,8 @@ public class CreateCardActivity extends FatherActivity {
 		setContentView(R.layout.create_card_layout);
 		sp = getSharedPreferences(Setting.spfile, Context.MODE_PRIVATE);
 		editor = sp.edit();
-		WebView wv = (WebView)findViewById(R.id.word_web_view);  
+		WebView wv = (WebView)findViewById(R.id.word_web_view); 
+		Log.e("url", Setting.link+sp.getString("username", ""));
 		wv.loadUrl(Setting.link+sp.getString("username", ""));
 		wv.getSettings().setJavaScriptEnabled(true);
 		WebSettings set = wv.getSettings();
