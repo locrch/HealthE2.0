@@ -249,7 +249,7 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="此次预约为实名就诊，请携带您的居民健康卡或佛山健康卡，在预约时段前15分钟到达医院，若未在规定时间内确认，该预约单自动作废并记爽约1次。" />
+            android:text="@string/history_content" />
 
     </LinearLayout>
 

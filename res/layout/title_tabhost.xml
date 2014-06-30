@@ -21,7 +21,7 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="16dp"
         android:layout_toRightOf="@+id/offerdetail_dsnews_img"
-        android:text="佛山健康e园"
+        android:text="佛山e院"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         android:textStyle="bold" />

@@ -82,13 +82,13 @@ public class FindDoctorListActivity extends FatherActivity {
 		infos_text = (TextView) findViewById(R.id.infos_text);
 		infos_text.setText(sp.getString("hospitalName", "") + "-"
 				+ sp.getString("departmentName", ""));
-
+		
 		mProgressDialog = new ProgressDialog(FindDoctorListActivity.this);
 		mProgressDialog.setMessage("正在加载数据...");
 		mProgressDialog.setIndeterminate(false);
 		mProgressDialog.setCanceledOnTouchOutside(false);// 设置进度条是否可以按退回键取消
 		mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-
+		
 		new AsyncTask<Void, Void, Boolean>() {
 
 			@Override
@@ -103,7 +103,7 @@ public class FindDoctorListActivity extends FatherActivity {
 
 				Intent intent = getIntent();
 				who = intent.getStringExtra("who");
-
+				
 				
 					setactivitytitle("搜索医生");
 					infos_text.setVisibility(View.GONE);
@@ -112,13 +112,14 @@ public class FindDoctorListActivity extends FatherActivity {
 					req.setDoctorName(sp.getString("serach_doc", ""));
 
 					req.setAucode(GET.Aucode);
-
+					
+					
 					SoapObject obj = service.findDoctorList(req);
 
 					if (obj != null) {
 						SoapObject areaObject = (SoapObject) obj
 								.getProperty("doctorList");
-
+						
 						for (int i = 0; i < areaObject.getPropertyCount(); i++) {
 
 							SoapObject soapChilds = (SoapObject) areaObject
@@ -140,7 +141,12 @@ public class FindDoctorListActivity extends FatherActivity {
 									"hospitalName").toString();
 							String departmentName = soapChilds.getProperty(
 									"departmentName").toString();
-
+							
+							/*String hospitalId = "";
+							String departmentId = "";
+							String hospitalName = "";
+							String departmentName = "";*/
+							
 							// String
 							// info=soapChilds.getProperty("info").toString();
 							String version = soapChilds.getProperty("version")

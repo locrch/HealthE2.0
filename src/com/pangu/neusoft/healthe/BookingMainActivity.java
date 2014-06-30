@@ -207,7 +207,8 @@ public class BookingMainActivity extends FatherActivity {
 		message.setText(getString(R.string.activity_bookingmain_content1).toString() + "\n" + "\n"
 				+ getString(R.string.activity_bookingmain_content2).toString() + "\n" + "\n"
 				+ getString(R.string.activity_bookingmain_content3).toString() + "\n" + "\n"
-				+ getString(R.string.activity_bookingmain_content4).toString());
+				+ getString(R.string.activity_bookingmain_content4).toString()+ "\n" + "\n"
+				+ getString(R.string.activity_bookingmain_content5).toString());
 		message.setTextColor(R.color.black);
 		message.setTextSize(15);
 		selecttext.clearFocus();

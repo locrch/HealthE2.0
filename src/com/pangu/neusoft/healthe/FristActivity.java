@@ -236,8 +236,8 @@ public class FristActivity extends Activity
 		if (count == 0)
 		{
 			Dialog alertDialog = new AlertDialog.Builder(this)
-					.setTitle("健康e园，服务你我")
-					.setMessage("欢迎关注和使用佛山市卫生和计划生育局为您提供的数字医院健康服务").create();
+					.setTitle(R.string.welcome_dialog_title)
+					.setMessage(R.string.welcome_dialog_content).create();
 			alertDialog.show();
 
 		}
@@ -361,7 +361,7 @@ public class FristActivity extends Activity
 		{
 			if ((System.currentTimeMillis() - exitTime) > 2000)
 			{
-				Toast.makeText(getApplicationContext(), "再按一次退出佛山健康e园",
+				Toast.makeText(getApplicationContext(), "再按一次退出佛山e院",
 						Toast.LENGTH_SHORT).show();
 				exitTime = System.currentTimeMillis();
 			} else

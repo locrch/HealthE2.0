@@ -11,7 +11,7 @@ import com.pangu.neusoft.healthe.R.menu;
 import android.view.View.OnClickListener;
 import android.os.Bundle;
 import android.app.Activity;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
