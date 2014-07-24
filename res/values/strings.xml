@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">佛山e院</string>
+    <string name="app_name">佛山健康e园</string>
     <string name="action_settings">设置</string>
     <string name="title_activity_booking_main">预约挂号</string>
     <string name="title_activity_area_list">选择地区</string>
@@ -37,7 +37,7 @@
     <string name="soft_update_later">稍后更新</string>
     <string name="soft_updating">正在更新</string>
     <string name="soft_update_cancel">取消</string>
-    <string name="serverurl">http://202.103.160.158:678/update.xml</string>
+    <string name="serverurl">http://202.103.160.153:1001/apk/update.xml</string>
     <string name="buslineurl">http://202.103.160.153:1001/BusInfo.xml</string>
     <string name="title_activity_set_text_size">字体设置</string>
     <string name="hello_world">Hello world!</string>
@@ -62,51 +62,50 @@
     <string name="title_activity_faher_drug">FaherDrugActivity</string>
     <string name="title_activity_father_son_drug">FatherSonDrugActivity</string>
     <string name="title_activity_disclaimer">免责声明</string>
-    <string name="activity_disclaimer_content1">    1.“佛山e院”致力于提供免费、便利、快捷公平的预约挂号服务。</string>
-    <string name="activity_disclaimer_content2">    2.因为优质医疗资源稀缺，请您尽量做到提前预约。	</string>
-    <string name="activity_disclaimer_content3">    3.为杜绝号贩倒号，就诊时请您务必携带居民健康卡或佛山健康卡前往就诊，否则在就诊时您提供的信息与“佛山e院”预约时提供的信息不一致挂号不成功，后果用户自负。</string>
-    <string name="activity_disclaimer_content4">    4.若您经常爽约或被系统判断有倒号行为，将自动取消您已经预约的号源，并冻结您的账号。</string>
-    <string name="activity_disclaimer_content5">    5.为更好的维护医院就诊秩序，请您按照预约时提示的候诊时间到医院候诊。若您迟到，医院有权另行安排就诊或取消本次就诊。</string>
-    <string name="activity_disclaimer_content6">    6.“佛山e院”为您提供居民健康档案、电子病历的查询，若您由于丢失手机或其它原因造成居民身份证号或佛山健康卡卡号，以及密码泄露，，而导致个人健康信息泄露，佛山e院不予承担任何责任。</string>
-    <string name="activity_disclaimer_contentp8">    *您注册过程中，请您在注册前认真阅览免责声明，完成注册确认，则表示您遵守本声明的全部条款，“佛山e院”保留随时修改服务条款的权利。</string>
-    <string name="activity_disclaimer_contentp9">    *由佛山市盘古开天信息科技有限公司提供技术支持</string>
-    <string name="activity_bookingmain_content1">    1、佛山e院由佛山市卫生和计划生育局负责解释，为您提供数字健康信息惠民服务。</string>
-    <string name="activity_bookingmain_content2">    2、如您已办理居民健康卡或佛山健康卡，可通过本客户端实名预约各联网医院专家号源进行就诊；</string>
-    <string name="activity_bookingmain_content3">    3、佛山e院实行黑名单管理制度，每累计爽约3次，将暂停使用预约挂号服务1个月。</string>
+    <string name="activity_disclaimer_content1">    1.佛山健康e园致力于为市民提供免费、便利、快捷公平的预约挂号服务。</string>
+    <string name="activity_disclaimer_content2">    2.就诊时请您务必携带居民健康卡或佛山健康卡提前前往就诊，如就诊时您提供的信息与“佛山健康e园”提供的信息不一致时，医院有权作废市民预约单，不安排优先就诊。	</string>
+    <string name="activity_disclaimer_content3">    3.若您经常爽约或被证实有倒号、贩号行为，佛山健康e园将有权取消您已经预约的号源，并冻结账号。</string>
+    <string name="activity_disclaimer_content4">    4.为更好的维护医院就诊秩序，请您按照预约时段提前到医院确认候诊。若您迟到，医院有权另行安排就诊或取消本次预约。</string>
+    <string name="activity_disclaimer_content5">    5、佛山健康e园为您提供便利的居民电子健康档案、电子病历信息查询，请您务必妥善保管个人健康卡号和密码，若因个人原因导致个人健康信息泄露，佛山健康e园不承担任何责任。</string>
+   
+    <string name="activity_disclaimer_contentp8">    *在注册前，请您认真阅览相关免责声明，完成注册确认，则表示您遵守本声明的全部条款，“佛山健康e园”保留按需修改完善相关服务条款的权利。</string>
+    <string name="activity_disclaimer_contentp9">    *“佛山健康e园”版权属佛山市卫生和计划生育局所有，由佛山市盘古开天信息科技有限公司提供技术支持。</string>
+    <string name="activity_bookingmain_content1">    1、佛山健康e园由佛山市卫生和计划生育局负责解释，为您提供数字健康信息惠民服务。</string>
+    <string name="activity_bookingmain_content2">    2、如您已办理居民健康卡或佛山健康卡，可通过本客户端实名预约各联网医院专家号源进行就诊。</string>
+    <string name="activity_bookingmain_content3">    3、佛山健康e园实行黑名单管理制度，每累计爽约3次，将暂停使用预约挂号服务1个月。</string>
     <string name="activity_bookingmain_content4">    4、预约就诊当天，请您凭个人有效证件在预约时段开始前15分钟到达医院确认取号；无故不应诊的将记爽约1次。</string>
     <string name="activity_bookingmain_content5">    5、每位市民每天最多只可预约同一医院或同一医生2次。</string>
     <string name="activity_bookingknow_content1">    1.请选择绑定居民健康卡或佛山健康卡，点击“添加”；</string>
     <string name="activity_bookingknow_content2">    2.选择居民健康卡，请输入您的身份证号和密码（初始密码为888888）；
 或选择佛山健康卡，请输入您的佛山健康卡号和密码（初始密码为身份证号后六位）；
+
 </string>
 <string name="history_content">请携带您的居民健康卡或佛山健康卡，在预约时段开始前15分钟到达医院确认。若未在规定时间内确认就诊，该预约单将自动作废并记爽约1次，累计爽约3次将暂停使用预约挂号服务1个月。</string>
     <string name="activity_bookingknow_content3">    3. 完成绑定后，屏幕面上方会出现您的名字和健康卡类型，选择前面的方框使用此健康卡进行预约就诊。</string>
     <string name="activity_bookingknow_content4">   </string>
-    <string name="activity_help_q1">1、关于居民健康卡、佛山健康卡</string>
-    <string name="activity_help_a1">答：居民健康卡是基于区域卫生信息平台、居民电子健康档案和医疗机构电子病历，可用于居民身份识别、个人基本健康信息存储、实现跨区域跨机构就医数据交换和费用结算的电子信息卡。居民健康卡集社保卡、新农合一卡通、医疗机构就诊卡的功能于一身，并具有金融功能，标准统一。佛山健康卡是我市为方便市民看病就医，打通区域医院信息系统，实现诊疗信息互通共享而免费发放的有效介质，该卡兼容身份证、市民卡，具有自助挂号、诊疗、体检、取药等服务功能。</string>
-    <string name="activity_help_q2">2、“佛山e院”客户端包含什么内容？</string>
-    <string name="activity_help_a2">答：佛山e院包括“健康服务”和“数字e院”两种模式。“健康服务”包括预约挂号、健康档案查询、电子病历查询、医问医答、健康大全等功能模块；“数字e院”是属于医院专属版本，里面将体现更多更详细的医院信息，包括：智能叫号、医院动态、医院服务。</string>
-    <string name="activity_help_q3">3、“佛山e院”如何收费？</string>
-    <string name="activity_help_a3">答：“佛山e院”注册会员，通过居民健康卡或佛山健康卡免费享有预约挂号服务。（患者就诊挂号费，由医院按物价部部门核实收取。）</string>
+    <string name="activity_help_q1">1、关于居民健康卡、佛山健康卡。</string>
+    <string name="activity_help_a1">居民健康卡是基于区域卫生信息平台、居民电子健康档案和医疗机构电子病历，可用于居民身份识别、个人基本健康信息存储、实现跨区域跨机构就医数据交换和费用结算的电子信息卡。
+        佛山健康卡是我市为方便市民看病就医，打通区域医院信息系统，实现诊疗信息互通共享而免费发放的有效介质，该卡兼容身份证、市民卡，具有自助挂号、诊疗、体检、取药等服务功能。</string>
+    <string name="activity_help_q2">2、佛山健康e园”客户端包含什么内容？</string>
+    <string name="activity_help_a2">佛山健康e园包括“健康服务”和“数字e院”两大模块。“健康服务”包括预约挂号、医问医答、健康大全等功能；“数字e院”是提供更多的医院信息服务，包括：智能叫号、医院动态、医院服务等。</string>
+    <string name="activity_help_q3">3、“佛山健康e园”是否收费？</string>
+    <string name="activity_help_a3">“佛山健康e园”注册会员，可凭居民健康卡或佛山健康卡免费享有预约挂号服务。（患者就诊挂号费，由医院按物价部门核实收取。）</string>
     <string name="activity_help_q4">4、如何预约挂号？</string>
     <string name="activity_help_a4">答：用户需注册登录，填写居民健康卡或佛山健康卡信息，然后选择地区→选择医院→选择科室→选择医生→选择就诊时间，最后点击“预约挂号”即可成功预约。</string>
     <string name="activity_help_q5">5、预约成功的订单可以修改吗？</string>
-    <string name="activity_help_a5">答：预约成功的订单不能进行修改，但可以选择取消此订单，重新进行预约挂号。每月爽约超过3次，将被限制挂号1个月。</string>
+    <string name="activity_help_a5">答：预约成功的订单不能进行修改，但可以选择取消，然后重新预约挂号。</string>
     <string name="activity_help_q6">6、如何取消预约挂号？</string>
-    <string name="activity_help_a6">答：取消订单操作，用户点击“个人中心”→“我的预约”，会出现用户历史预约详细信息，点击“取消预约”按钮，如需取消，请在就诊前一个工作日下午4点前取消。</string>
-    <string name="activity_help_q7">7、关于健康卡信息。</string>
-    <string name="activity_help_a7">答：健康卡分居民健康卡和佛山健康卡两种，健康卡信息包括姓名、卡号、类型及身份证号，绑定健康卡只需填写身份证号或佛山健康卡号密码即可，无需输入个人信息。</string>
-    <string name="activity_help_q8">8、如何支付预约单？</string>
-    <string name="activity_help_a8">答：“佛山e院”手机客户端暂时只支持现场支付，预约单需要市民到医院现场支付确认。下一步逐步完善银联支付、手机支付、翼支付等功能。</string>
-    <string name="activity_help_q9">9、关于就诊时间？</string>
-    <string name="activity_help_a9">答：预约挂号成功后，市民按预约就诊相关规定到达医院确认后优先就诊，医院按“先到先诊”的规则安排就诊。</string>
-    <string name="activity_help_q10">10、预约成功后如何到医院就诊？</string>
-    <string name="activity_help_a10">答：预约成功后，在“服务e区”—“我的预约”里面有预约信息，根据信息上的流水号到医院挂号处交费取号，为确保您能够准时就诊，请在预约时段开始时间前15分钟到达医院现场取号确认，各医院取号的地点在医院现场将有相应指引。</string>
-    <string name="activity_help_q11">11、预约挂号有次数限制吗？</string>
-    <string name="activity_help_a11">答：有。①同一健康卡在同一就诊日、同一医院、同一医生可以预约2次。②同一健康卡在同一就诊日、同一医院可以预约2次。</string>
+    <string name="activity_help_a6">答：用户点击“个人中心”→“我的预约”，会出现用户历史预约详细信息，点击“取消预约”按钮。请务必在就诊日前一个工作日凌晨12点前取消；如需在就诊当天取消，市民可按各医院相关规定进行操作。</string>
+    <string name="activity_help_q7">7、如何支付预约单？</string>
+    <string name="activity_help_a7">答：佛山健康e园手机客户端暂时只支持现场支付，市民需到医院现场支付挂号单。</string>
+    <string name="activity_help_q8">8、关于就诊时间。</string>
+    <string name="activity_help_a8">答：预约成功后，市民需在预约时段开始前15分钟到达医院确认，然后按“预约优先、先到先诊”安排就诊。</string>
+    <string name="activity_help_q9">9、预约挂号有次数限制吗？</string>
+    <string name="activity_help_a9">答：同一健康卡号每天最多只可预约同一医院或同一医生2次。</string>
+    
     <string name="title_activity_my">My</string>
     <string name="title_activity_health_info">健康大全</string>
-    <string name="welcome_dialog_title">佛山e院，服务你我他</string>
-    <string name="welcome_dialog_content">欢迎关注和使用佛山市卫生和计划生育局为您提供的佛山e院信息惠民服务。</string>
+    <string name="welcome_dialog_title">佛山健康e园，服务你我他</string>
+    <string name="welcome_dialog_content">欢迎关注和使用佛山市卫生和计划生育局为您提供的佛山健康e园信息惠民服务。</string>
 
 </resources>

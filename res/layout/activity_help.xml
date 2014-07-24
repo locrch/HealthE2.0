@@ -141,11 +141,11 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="25dp"
         android:text="@string/activity_help_a9" />
-        <TextView android:textSize="@dimen/button_textsize"
+        <!-- <TextView android:textSize="@dimen/button_textsize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/activity_help_q10"
+        
         android:textStyle="bold" />
         <TextView android:textSize="@dimen/button_textsize"
         android:layout_width="wrap_content"
@@ -153,19 +153,19 @@
         android:layout_below="@+id/zhinan_title"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="25dp"
-        android:text="@string/activity_help_a10" />
+        />
         <TextView android:textSize="@dimen/button_textsize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/activity_help_q11"
+        
         android:textStyle="bold" />
         <TextView android:textSize="@dimen/button_textsize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="25dp"
-        android:text="@string/activity_help_a11" />
+         /> -->
         	
         </LinearLayout>
         </ScrollView>

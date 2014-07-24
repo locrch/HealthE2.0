@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class CheckVersion extends Activity
 {
-	public static String check_url = "http://202.103.160.158:678/V1/HealthE.apk";
+	public static String check_url = "http://202.103.160.153:1001/apk/HealthE.apk";
 	/**
 	 * @param args
 	 */
@@ -30,7 +30,7 @@ public class CheckVersion extends Activity
 	public Boolean CheckVersion()
 	{
 		
-		if (check_url == "http://202.103.160.158:678/V1/HealthE.apk")
+		if (check_url == "http://202.103.160.153:1001/apk/HealthE.apk")
 		{
 			Toast.makeText(getApplicationContext(), "已经是最新版本！", Toast.LENGTH_SHORT).show();
 			
