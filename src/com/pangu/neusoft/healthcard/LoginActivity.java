@@ -23,6 +23,8 @@ import com.pangu.neusoft.healthe.R.menu;
 import com.pangu.neusoft.tools.DialogShow;
 import com.pangu.neusoft.tools.StringMethods;
 
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
@@ -188,6 +190,29 @@ public class LoginActivity extends FatherActivity {
 	}
 	public String checkData(){
 		String msg="";
+		
+		ConnectivityManager connectivityManager = (ConnectivityManager)getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo[] networkInfo = connectivityManager.getAllNetworkInfo();
+		
+		/*if (networkInfo != null && networkInfo.length > 0)
+        {
+            for (int i = 0; i < networkInfo.length; i++)
+            {
+                System.out.println(i + "===状态===" + networkInfo[i].getState());
+                System.out.println(i + "===类型===" + networkInfo[i].getTypeName());
+                // 判断当前网络状态是否为连接状态
+                if (!(networkInfo[i].getState() == NetworkInfo.State.CONNECTED))
+                {
+                	msg+="无法连接网络或网络信号弱导致失败";
+                }
+            }
+        }*/
+		
+		if (!(networkInfo[0].getState() == NetworkInfo.State.CONNECTED)&&!(networkInfo[1].getState() == NetworkInfo.State.CONNECTED))
+        {
+        	msg+="无法连接网络或网络信号弱导致失败";
+        }
+		
 		if(username.getText().toString().equals("")){
 			msg+="用户名不能为空";
 		}
