@@ -297,12 +297,18 @@ public class FatherActivity extends Activity
 	        } 
 	    }).show(); 
 	// super.onBackPressed(); 
-	   
-  
-	  
-	     
-	  
-	   
+	   }  
 	
-	}  
+    boolean checklogin(){
+    	if (sp.getString("username", "").equals(""))
+		{
+    		return false;
+		} else
+		{
+			return true;
+		}
+    	 
+    	 
+    	 
+     }
 }

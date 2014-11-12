@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frist_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+        >
+		<TextView
+            android:id="@+id/main_slidingmenu_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="注册"
+            android:textSize="@dimen/slidingmenu_textsize"
+            android:gravity="center"
+            android:layout_margin="10dp" />
+        <TextView
+            android:id="@+id/main_slidingmenu_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="登录"
+            android:textSize="@dimen/slidingmenu_textsize"
+            android:gravity="center"
+            android:layout_margin="10dp" />
+        <TextView
+            android:id="@+id/main_slidingmenu_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="设置"
+            android:textSize="@dimen/slidingmenu_textsize"
+            android:gravity="center"
+            android:layout_margin="10dp" />
+        
+        
+    </LinearLayout>
+    
+</FrameLayout>
