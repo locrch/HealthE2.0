@@ -13,7 +13,7 @@
             android:id="@+id/main_slidingmenu_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="您好!"
+            android:text="注销"
             android:textSize="@dimen/slidingmenu_textsize"
             android:gravity="center"
             android:layout_margin="10dp" />

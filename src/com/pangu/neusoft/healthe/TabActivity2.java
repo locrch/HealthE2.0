@@ -23,6 +23,7 @@ public class TabActivity2 extends Activity
 			tab2_moneycheck, tab2_eachother, tab2_healthinfo;
 	private SharedPreferences sp;
 	private Editor editor;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
@@ -53,7 +54,7 @@ public class TabActivity2 extends Activity
 		tab2_healthinfo = (ImageButton) findViewById(R.id.tab2_healthinfo);
 		sp = getSharedPreferences(Setting.spfile, Context.MODE_PRIVATE);
 		editor = sp.edit();
-		
+
 		OnClickListener development = new OnClickListener()
 		{
 
@@ -110,23 +111,24 @@ public class TabActivity2 extends Activity
 				 * Intent(TabActivity2.this, BookingMainActivity.class)
 				 * .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)) .getDecorView();
 				 */
-				if(sp.getInt("total_cards",0)==0){
-					Toast.makeText(TabActivity2.this, "请先添加健康卡", Toast.LENGTH_SHORT).show();
-					Intent intent = new Intent(TabActivity2.this,ListCardActivity.class);
-					startActivity(intent);
-					//finish();
-				}else{
-					Intent intent = new Intent(TabActivity2.this,
-							BookingMainActivity.class);
-	
-					startActivity(intent);
-					//finish();
-				}
-//				Intent intent = new Intent(TabActivity2.this,
-//						BookingMainActivity.class);
-//
-//				startActivity(intent);
-				// finish();
+				/*
+				 * if(sp.getInt("total_cards",0)==0){
+				 * Toast.makeText(TabActivity2.this, "请先添加健康卡",
+				 * Toast.LENGTH_SHORT).show(); Intent intent = new
+				 * Intent(TabActivity2.this,ListCardActivity.class);
+				 * startActivity(intent);
+				 * 
+				 * }else{ Intent intent = new Intent(TabActivity2.this,
+				 * BookingMainActivity.class);
+				 * 
+				 * startActivity(intent);
+				 * 
+				 * }
+				 */
+				Intent intent = new Intent(TabActivity2.this,
+						BookingMainActivity.class);
+
+				startActivity(intent);
 
 			}
 		});

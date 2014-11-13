@@ -41,7 +41,7 @@
         android:layout_below="@+id/password"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="29dp"
-        android:text="记住密码" />
+        android:text="记住用户名" />
 
     <Button
         android:id="@+id/login_btn"

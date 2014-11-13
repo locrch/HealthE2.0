@@ -106,12 +106,12 @@ public class LoginActivity extends FatherActivity {
 		  
 		if (member_CheckBox.isChecked())
 		{ 
-			  username.setText(sp.getString("username", ""));
-			  password.setText(sp.getString("password", ""));
+			  username.setText(sp.getString("member_username", ""));
+			  //password.setText(sp.getString("password", ""));
 		}
 	      else {
-	    	  //username.getText().clear();
-			  password.getText().clear();
+	    	  username.getText().clear();
+			  //password.getText().clear();
 		}
 	      
 		  member_CheckBox.setOnCheckedChangeListener(new OnCheckedChangeListener()
@@ -128,7 +128,7 @@ public class LoginActivity extends FatherActivity {
 				}
 				else {
 					editor.putBoolean("auto_ischecked", false);
-					editor.putString("password", "");
+					
 					editor.commit();
 					
 				}
@@ -306,17 +306,20 @@ public class LoginActivity extends FatherActivity {
 							DialogShow.showDialog(LoginActivity.this, msg);
 							
 							
-							if(result){	
+							if(result){
+								editor.putString("member_username", username.getText().toString());
+								editor.commit();
+								
 								final Timer t = new Timer();
 								t.schedule(new TimerTask() {
 									public void run() {
-										Intent intent=new Intent(LoginActivity.this,ListCardActivity.class);
-										intent.putExtra("fromlogin", "fromlogin");
-										startActivity(intent);
+										//Intent intent=new Intent(LoginActivity.this,ListCardActivity.class);
+										//intent.putExtra("fromlogin", "fromlogin");
+										//startActivity(intent);
 										finish();
-										t.cancel(); 
+										//t.cancel(); 
 									}
-								}, Setting.dialogtimeout+1000);
+								}, Setting.dialogtimeout+300);
 								
 							}
 													
