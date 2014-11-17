@@ -1,14 +1,18 @@
 package com.pangu.neusoft.healthe;
 
+import com.baidu.mobstat.StatActivity;
 import com.baidu.mobstat.StatService;
 
+
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.pangu.neusoft.CustomView.PopMenu;
 import com.pangu.neusoft.healthcard.ChangeUsernameActivity;
 import com.pangu.neusoft.healthcard.LoginActivity;
 import com.pangu.neusoft.healthcard.RegisterActivity;
-import com.pangu.neusoft.healthe.R.drawable;
-import com.pangu.neusoft.healthe.R.id;
 
+import com.pangu.neusoft.healthe.R;
+
+import android.annotation.SuppressLint;
 import android.app.ActivityGroup;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
@@ -22,6 +26,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -38,103 +43,55 @@ public class TabHostActivity extends ActivityGroup
 	private TabHost tabHost;
 	private LayoutInflater mInflater = null;
 	TextView tab2_text;
-	Button back_index, back_back;
+	Button back_index, back_back,title_menu_btn;
 	SlidingMenu menu;
 	private SharedPreferences sp;
 	private Editor editor;
 
-	TextView main_slidingmenu_1, main_slidingmenu_2, main_slidingmenu_3,
-			main_slidingmenu_4, main_slidingmenu_5, main_slidingmenu_6,
-			main_slidingmenu_7, main_slidingmenu_8, main_slidingmenu_reg,
-			main_slidingmenu_login, main_slidingmenu_setting;
-
-	private void Init_login_menu()
+	View contView;
+	
+	TextView main_pop_menu_2;
+	
+	private void Init_login_menu(View v)
 	{
 		// TODO Auto-generated method stub
-		menu.setMenu(R.layout.main_slidingmenu_login);
-
-		main_slidingmenu_1 = (TextView) findViewById(R.id.main_slidingmenu_1);
-		main_slidingmenu_2 = (TextView) findViewById(R.id.main_slidingmenu_2);
-
-		main_slidingmenu_1.setOnClickListener(new OnClickListener()
-		{
-
-			@Override
-			public void onClick(View v)
-			{
-				// TODO Auto-generated method stub
-				logoutDialog(TabHostActivity.this);
-				
-			}
-		});
+		PopMenu popMenu = new PopMenu(TabHostActivity.this,R.layout.main_pop_menu_login);
 		
-		main_slidingmenu_2.setOnClickListener(new OnClickListener()
+		popMenu.showPopupWindow(v);
+		contView = popMenu.getContentView();
+		
+		main_pop_menu_2 = (TextView)contView.findViewById(R.id.main_pop_menu_2);
+		
+		main_pop_menu_2.setOnClickListener(new OnClickListener()
 		{
-
+			
 			@Override
 			public void onClick(View v)
 			{
 				// TODO Auto-generated method stub
-				startActivity(new Intent(TabHostActivity.this,
-						ChangeUsernameActivity.class));
+				startActivity(new Intent(TabHostActivity.this,ChangeUsernameActivity.class));
 			}
 		});
 	}
+	
+	
 	
 	private void Init_logout_menu()
 	{
 		// TODO Auto-generated method stub
-		menu.setMenu(R.layout.main_slidingmenu_logout);
 		
-		main_slidingmenu_reg = (TextView)findViewById(R.id.main_slidingmenu_reg);
-		main_slidingmenu_login = (TextView)findViewById(R.id.main_slidingmenu_login);
-		main_slidingmenu_setting = (TextView)findViewById(R.id.main_slidingmenu_setting);
-		
-		main_slidingmenu_reg.setOnClickListener(new OnClickListener()
-		{
-			
-			@Override
-			public void onClick(View v)
-			{
-				// TODO Auto-generated method stub
-				startActivity(new Intent(TabHostActivity.this,
-						RegisterActivity.class));
-			}
-		});
-		
-		main_slidingmenu_login.setOnClickListener(new OnClickListener()
-		{
-			
-			@Override
-			public void onClick(View v)
-			{
-				// TODO Auto-generated method stub
-				startActivity(new Intent(TabHostActivity.this,
-						LoginActivity.class));
-			}
-		});
-		main_slidingmenu_setting.setOnClickListener(new OnClickListener()
-		{
-			
-			@Override
-			public void onClick(View v)
-			{
-				// TODO Auto-generated method stub
-				
-			}
-		});
 	}
 	
-	private boolean Islogin()
+	private boolean Islogin(View v)
 	{
 		
 		if (!sp.getString("username", "").equals(""))
 		{
-			Init_login_menu();
+			Init_login_menu(v);
 			return true;
 		} else
 		{
-			Init_logout_menu();
+			//Init_logout_menu();
 			return false;
 		}
 	}
@@ -157,6 +114,22 @@ public class TabHostActivity extends ActivityGroup
 		 * if (Value.equals("zhineng")) { tab2_text.setText("智能健康"); } else {
 		 * tab2_text.setText("数字医院"); }
 		 */
+		
+		title_menu_btn = (Button)findViewById(R.id.title_menu_btn);
+		
+		title_menu_btn.setOnClickListener(new OnClickListener()
+		{
+			
+			@Override
+			public void onClick(View v)
+			{
+				// TODO Auto-generated method stub
+				Islogin(v);
+			}
+		});
+		
+		
+		
 		sp = getSharedPreferences(Setting.spfile, Context.MODE_PRIVATE);
 		editor = sp.edit();
 		mInflater = LayoutInflater.from(this);
@@ -224,9 +197,11 @@ public class TabHostActivity extends ActivityGroup
 			}
 		});
 
+		
+		
 		/* 侧滑菜单 */
 		// 滑动模式，左滑还是右滑
-		menu = new SlidingMenu(this);
+		/*menu = new SlidingMenu(this);
 		menu.setMode(SlidingMenu.LEFT); // 设置菜单
 		menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_MARGIN);
 		menu.setShadowWidthRes(R.dimen.slidingmenu_shadowWidth);
@@ -234,20 +209,22 @@ public class TabHostActivity extends ActivityGroup
 		menu.setBehindOffsetRes(R.dimen.slidingmenu_behindOffset);
 		menu.setFadeDegree(0.35f);
 		menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
-
 		menu.setBehindWidth(200);
+		*/
+		
 
-		Islogin();
-
+		
 	}
 
+	
+	
 	@Override
 	protected void onResume()
 	{
 		// TODO Auto-generated method stub
 		super.onResume();
 		StatService.onResume(this);
-		Islogin();
+		
 	}
 	
 	@Override
@@ -255,7 +232,7 @@ public class TabHostActivity extends ActivityGroup
 	{
 		// TODO Auto-generated method stub
 		super.onRestart();
-		Islogin();
+		
 	}
 
 	@Override
@@ -288,7 +265,7 @@ public class TabHostActivity extends ActivityGroup
 						editor.remove("card" + sp.getString("defaultcardno", "")+ "_" + "owner");
 						editor.remove("defaultcardno");
 						editor.commit();
-						Islogin();
+						
 					}
 				});
 

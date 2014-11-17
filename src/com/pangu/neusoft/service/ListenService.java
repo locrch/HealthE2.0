@@ -14,6 +14,7 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.text.format.Time;
 import android.util.Log;
+import android.widget.Toast;
 
 
 
@@ -49,6 +50,8 @@ public class ListenService extends Service {
 	  	  //自动登陆
 	    	sp = getSharedPreferences(Setting.spfile, Context.MODE_PRIVATE);
 			editor = sp.edit();
+			Toast.makeText(getApplication(),String.valueOf(sp.getBoolean("auto_login_ischecked", true)), Toast.LENGTH_SHORT)
+					.show() ;
 		    if(!sp.getBoolean("auto_login_ischecked", true)){
 		    	editor.putString("username", "");
 		    	editor.putString("password", "");

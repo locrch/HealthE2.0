@@ -33,4 +33,5 @@
 	<dimen name="tab2_icon_tablelayout_margintop">100dp</dimen>
 	<dimen name="history_cotent_padding">16dp</dimen>
 	<dimen name="tab_bg_height">600dp</dimen>
+	<dimen name="pop_menu_textsize">18sp</dimen>
 </resources>

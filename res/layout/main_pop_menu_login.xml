@@ -5,75 +5,84 @@
     android:layout_height="match_parent" >
     
     <LinearLayout 
-        android:layout_width="match_parent"
-    android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="#222222"
         >
 		<TextView
-            android:id="@+id/main_slidingmenu_1"
+            android:id="@+id/main_pop_menu_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="注销"
-            android:textSize="@dimen/slidingmenu_textsize"
+            android:textSize="@dimen/pop_menu_textsize"
             android:gravity="center"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF" />
         <TextView
-            android:id="@+id/main_slidingmenu_2"
+            android:id="@+id/main_pop_menu_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="修改用户名"
-            android:textSize="@dimen/slidingmenu_textsize"
+            android:textSize="@dimen/pop_menu_textsize"
             android:gravity="center"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF" />
         <TextView
-            android:id="@+id/main_slidingmenu_3"
+            android:id="@+id/main_pop_menu_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="修改密码"
-            android:textSize="@dimen/slidingmenu_textsize"
+            android:textSize="@dimen/pop_menu_textsize"
             android:gravity="center"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF" />
         <TextView
-            android:id="@+id/main_slidingmenu_4"
+            android:id="@+id/main_pop_menu_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="健康卡管理"
-            android:textSize="@dimen/slidingmenu_textsize"
+            android:textSize="@dimen/pop_menu_textsize"
             android:gravity="center"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF" />
         
         <TextView
-            android:id="@+id/main_slidingmenu_5"
+            android:id="@+id/main_pop_menu_5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="我的预约"
-            android:textSize="@dimen/slidingmenu_textsize"
+            android:textSize="@dimen/pop_menu_textsize"
             android:gravity="center"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF" />
         <TextView
-            android:id="@+id/main_slidingmenu_6"
+            android:id="@+id/main_pop_menu_6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="我的账单"
-            android:textSize="@dimen/slidingmenu_textsize"
+            android:textSize="@dimen/pop_menu_textsize"
             android:gravity="center"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF" />
         <TextView
-            android:id="@+id/main_slidingmenu_7"
+            android:id="@+id/main_pop_menu_7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="我的收藏"
-            android:textSize="@dimen/slidingmenu_textsize"
+            android:textSize="@dimen/pop_menu_textsize"
             android:gravity="center"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF" />
         <TextView
-            android:id="@+id/main_slidingmenu_8"
+            android:id="@+id/main_pop_menu_8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="设置"
-            android:textSize="@dimen/slidingmenu_textsize"
+            android:textSize="@dimen/pop_menu_textsize"
             android:gravity="center"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF" />
         
     </LinearLayout>
     
