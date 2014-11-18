@@ -5,34 +5,38 @@
     android:layout_height="match_parent" >
     
     <LinearLayout 
-        android:layout_width="match_parent"
-    android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="#222222"
         >
 		<TextView
-            android:id="@+id/main_slidingmenu_reg"
+            android:id="@+id/main_pop_menu_logout_reg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="注册"
-            android:textSize="@dimen/slidingmenu_textsize"
+            android:textSize="@dimen/pop_menu_textsize"
             android:gravity="center"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF" />
         <TextView
-            android:id="@+id/main_slidingmenu_login"
+            android:id="@+id/main_pop_menu_logout_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="登录"
-            android:textSize="@dimen/slidingmenu_textsize"
+            android:textSize="@dimen/pop_menu_textsize"
             android:gravity="center"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF" />
         <TextView
-            android:id="@+id/main_slidingmenu_setting"
+            android:id="@+id/main_pop_menu_logout_setting"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="设置"
-            android:textSize="@dimen/slidingmenu_textsize"
+            android:textSize="@dimen/pop_menu_textsize"
             android:gravity="center"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF" />
         
         
     </LinearLayout>

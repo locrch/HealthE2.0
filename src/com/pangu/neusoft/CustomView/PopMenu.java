@@ -64,8 +64,12 @@ public class PopMenu extends PopupWindow
             	CustomPopMenu.this.dismiss();
             }
         });*/
+        if (this.isTouchable())
+		{
+			this.dismiss();
+		} 
     }
- 
+    	
     /**
      * 显示popupWindow
      * 

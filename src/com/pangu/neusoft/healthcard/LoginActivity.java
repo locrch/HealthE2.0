@@ -94,6 +94,9 @@ public class LoginActivity extends FatherActivity {
 		  reg_btn.setOnClickListener(reg);
 		  member_CheckBox=(CheckBox)findViewById(R.id.member_CheckBox);
 		  auto_CheckBox=(CheckBox)findViewById(R.id.auto_CheckBox);
+		  
+		  
+		  
 	      username=(EditText)findViewById(R.id.username);
 	      password=(EditText)findViewById(R.id.password);
 	      
@@ -170,7 +173,10 @@ public class LoginActivity extends FatherActivity {
 				//finish();
 			} 
 		  });
-		  
+		  member_CheckBox.setVisibility(View.INVISIBLE);
+		  auto_CheckBox.setVisibility(View.INVISIBLE);
+		  editor.putBoolean("auto_login_ischecked", true);
+		  editor.commit();
 	}
 	@Override
 	protected void onStop()

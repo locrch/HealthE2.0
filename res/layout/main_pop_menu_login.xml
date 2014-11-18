@@ -11,7 +11,7 @@
     android:background="#222222"
         >
 		<TextView
-            android:id="@+id/main_pop_menu_1"
+            android:id="@+id/main_pop_menu_login_logout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="注销"
@@ -20,7 +20,7 @@
             android:layout_margin="10dp"
             android:textColor="#FFFFFF" />
         <TextView
-            android:id="@+id/main_pop_menu_2"
+            android:id="@+id/main_pop_menu_login_ch_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="修改用户名"
@@ -29,7 +29,7 @@
             android:layout_margin="10dp"
             android:textColor="#FFFFFF" />
         <TextView
-            android:id="@+id/main_pop_menu_3"
+            android:id="@+id/main_pop_menu_login_ch_ps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="修改密码"
@@ -38,7 +38,7 @@
             android:layout_margin="10dp"
             android:textColor="#FFFFFF" />
         <TextView
-            android:id="@+id/main_pop_menu_4"
+            android:id="@+id/main_pop_menu_login_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="健康卡管理"
@@ -48,7 +48,7 @@
             android:textColor="#FFFFFF" />
         
         <TextView
-            android:id="@+id/main_pop_menu_5"
+            android:id="@+id/main_pop_menu_login_history"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="我的预约"
@@ -57,7 +57,7 @@
             android:layout_margin="10dp"
             android:textColor="#FFFFFF" />
         <TextView
-            android:id="@+id/main_pop_menu_6"
+            android:id="@+id/main_pop_menu_login_payment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="我的账单"
@@ -66,7 +66,7 @@
             android:layout_margin="10dp"
             android:textColor="#FFFFFF" />
         <TextView
-            android:id="@+id/main_pop_menu_7"
+            android:id="@+id/main_pop_menu_login_favorite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="我的收藏"
@@ -75,7 +75,7 @@
             android:layout_margin="10dp"
             android:textColor="#FFFFFF" />
         <TextView
-            android:id="@+id/main_pop_menu_8"
+            android:id="@+id/main_pop_menu_login_setting"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="设置"

@@ -6,9 +6,14 @@ import com.baidu.mobstat.StatService;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.pangu.neusoft.CustomView.PopMenu;
+import com.pangu.neusoft.healthcard.CardInfoActivity;
+import com.pangu.neusoft.healthcard.ChangePassActivity;
 import com.pangu.neusoft.healthcard.ChangeUsernameActivity;
+import com.pangu.neusoft.healthcard.ConnectListActivity;
+import com.pangu.neusoft.healthcard.ListCardActivity;
 import com.pangu.neusoft.healthcard.LoginActivity;
 import com.pangu.neusoft.healthcard.RegisterActivity;
+import com.pangu.neusoft.healthcard.ShowHistoryActivity;
 
 import com.pangu.neusoft.healthe.R;
 
@@ -49,20 +54,40 @@ public class TabHostActivity extends ActivityGroup
 	private Editor editor;
 
 	View contView;
-	
-	TextView main_pop_menu_2;
+	PopMenu popMenu;
+	TextView menu_login_reg,menu_logout_login,menu_logot_setting,pop_menu_login_ch_user,pop_menu_login_logout,
+	menu_login_ch_ps,menu_login_card,menu_login_history,menu_login_payment,menu_login_favorite,menu_login_setting;
 	
 	private void Init_login_menu(View v)
 	{
 		// TODO Auto-generated method stub
-		PopMenu popMenu = new PopMenu(TabHostActivity.this,R.layout.main_pop_menu_login);
+		popMenu = new PopMenu(TabHostActivity.this,R.layout.main_pop_menu_login);
 		
 		popMenu.showPopupWindow(v);
 		contView = popMenu.getContentView();
 		
-		main_pop_menu_2 = (TextView)contView.findViewById(R.id.main_pop_menu_2);
+		pop_menu_login_logout = (TextView)contView.findViewById(R.id.main_pop_menu_login_logout); 
+		pop_menu_login_ch_user = (TextView)contView.findViewById(R.id.main_pop_menu_login_ch_user);
+		menu_login_ch_ps = (TextView)contView.findViewById(R.id.main_pop_menu_login_ch_ps);
+		menu_login_card= (TextView)contView.findViewById(R.id.main_pop_menu_login_card);
+		menu_login_history= (TextView)contView.findViewById(R.id.main_pop_menu_login_history);
+		menu_login_payment= (TextView)contView.findViewById(R.id.main_pop_menu_login_payment);
+		menu_login_favorite= (TextView)contView.findViewById(R.id.main_pop_menu_login_favorite);
+		menu_login_setting= (TextView)contView.findViewById(R.id.main_pop_menu_login_setting);
 		
-		main_pop_menu_2.setOnClickListener(new OnClickListener()
+		
+		pop_menu_login_logout.setOnClickListener(new OnClickListener()
+		{
+			
+			@Override
+			public void onClick(View v)
+			{
+				// TODO Auto-generated method stub
+				logoutDialog(TabHostActivity.this);
+			}
+		});
+		
+		pop_menu_login_ch_user.setOnClickListener(new OnClickListener()
 		{
 			
 			@Override
@@ -72,14 +97,117 @@ public class TabHostActivity extends ActivityGroup
 				startActivity(new Intent(TabHostActivity.this,ChangeUsernameActivity.class));
 			}
 		});
+		
+		menu_login_ch_ps.setOnClickListener(new OnClickListener()
+		{
+			
+			@Override
+			public void onClick(View v)
+			{
+				// TODO Auto-generated method stub
+				startActivity(new Intent(TabHostActivity.this,ChangePassActivity.class));
+			}
+		});
+		menu_login_card.setOnClickListener(new OnClickListener()
+		{
+			
+			@Override
+			public void onClick(View v)
+			{
+				// TODO Auto-generated method stub
+				startActivity(new Intent(TabHostActivity.this,ListCardActivity.class));
+			}
+		});
+		menu_login_history.setOnClickListener(new OnClickListener()
+		{
+			
+			@Override
+			public void onClick(View v)
+			{
+				// TODO Auto-generated method stub
+				startActivity(new Intent(TabHostActivity.this,ShowHistoryActivity.class));
+			}
+		});
+		menu_login_payment.setOnClickListener(new OnClickListener()
+		{
+			
+			@Override
+			public void onClick(View v)
+			{
+				// TODO Auto-generated method stub
+				Toast.makeText(getApplication(), "该功能暂未开放！", Toast.LENGTH_SHORT)
+						.show();
+			}
+		});
+		menu_login_favorite.setOnClickListener(new OnClickListener()
+		{
+			
+			@Override
+			public void onClick(View v)
+			{
+				// TODO Auto-generated method stub
+				startActivity(new Intent(TabHostActivity.this,ConnectListActivity.class));
+			}
+		});
+		
+		menu_login_setting.setOnClickListener(new OnClickListener()
+		{
+			
+			@Override
+			public void onClick(View v)
+			{
+				// TODO Auto-generated method stub
+				
+			}
+		});
 	}
 	
 	
 	
-	private void Init_logout_menu()
+	private void Init_logout_menu(View v)
 	{
 		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub
+				popMenu = new PopMenu(TabHostActivity.this,R.layout.main_pop_menu_logout);
+				
+				popMenu.showPopupWindow(v);
+				contView = popMenu.getContentView();
+				
+				menu_login_reg = (TextView)contView.findViewById(R.id.main_pop_menu_logout_reg);
+				menu_logout_login = (TextView)contView.findViewById(R.id.main_pop_menu_logout_login);
+				menu_logot_setting = (TextView)contView.findViewById(R.id.main_pop_menu_logout_setting);
+				
+				menu_login_reg.setOnClickListener(new OnClickListener()
+				{
+					
+					@Override
+					public void onClick(View v)
+					{
+						// TODO Auto-generated method stub
+						startActivity(new Intent(TabHostActivity.this,RegisterActivity.class));
+					}
+				});
+				
+				menu_logout_login.setOnClickListener(new OnClickListener()
+				{
+					
+					@Override
+					public void onClick(View v)
+					{
+						// TODO Auto-generated method stub
+						startActivity(new Intent(TabHostActivity.this,LoginActivity.class));
+					}
+				});
+				menu_logot_setting.setOnClickListener(new OnClickListener()
+				{
+					
+					@Override
+					public void onClick(View v)
+					{
+						// TODO Auto-generated method stub
+						
+					}
+				});
 	}
 	
 	private boolean Islogin(View v)
@@ -91,7 +219,7 @@ public class TabHostActivity extends ActivityGroup
 			return true;
 		} else
 		{
-			//Init_logout_menu();
+			Init_logout_menu(v);
 			return false;
 		}
 	}
@@ -224,6 +352,10 @@ public class TabHostActivity extends ActivityGroup
 		// TODO Auto-generated method stub
 		super.onResume();
 		StatService.onResume(this);
+		if (popMenu!=null)
+		{
+			popMenu.dismiss();
+		}
 		
 	}
 	
@@ -232,7 +364,10 @@ public class TabHostActivity extends ActivityGroup
 	{
 		// TODO Auto-generated method stub
 		super.onRestart();
-		
+		if (popMenu!=null)
+		{
+			popMenu.dismiss();
+		}
 	}
 
 	@Override
@@ -241,6 +376,7 @@ public class TabHostActivity extends ActivityGroup
 		// TODO Auto-generated method stub
 		super.onPause();
 		StatService.onPause(this);
+		
 	}
 	
 	private void logoutDialog(Context context)
@@ -266,6 +402,10 @@ public class TabHostActivity extends ActivityGroup
 						editor.remove("defaultcardno");
 						editor.commit();
 						
+						if (popMenu!=null)
+						{
+							popMenu.dismiss();
+						}
 					}
 				});
 
